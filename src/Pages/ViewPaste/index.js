@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+
 export default function ViewPaste() {
   const { id } = useParams();
   const [paste, setPaste] = useState(null);
