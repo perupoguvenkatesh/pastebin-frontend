@@ -11,7 +11,7 @@ export default function ViewPaste() {
     setError(null);
     setPaste(null);
     try {
-      const res = await fetch(`https://pastebin-backend-teal.vercel.app/api/pastes/${id}`, {
+      const res = await fetch(`https://pastebin-backend-sigma.vercel.app/api/pastes/${id}`, {
         headers: {
           // Optional: uncomment to test expiry with a simulated time
           // 'x-test-now-ms': String(Date.now())
