@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import CreatePaste from './Pages/CreatePaste';
+import ViewPaste from './Pages/ViewPaste';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div style={{ maxWidth: 720, margin: '24px auto', fontFamily: 'system-ui' }}>
+        <header style={{ marginBottom: 24 }}>
+          <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
+            <h1>Pastebin</h1>
+          </Link>
+        </header>
+        <Routes>
+          <Route path="/" element={<CreatePaste />} />
+          <Route path="/p/:id" element={<ViewPaste />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
-
 export default App;
+
