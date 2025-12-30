@@ -24,7 +24,7 @@ export default function CreatePaste() {
     }
 
     try {
-      const res = await fetch('/api/pastes', {
+      const res = await fetch('https://pastebin-backend-mocha.vercel.app/api/pastes', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
